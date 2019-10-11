@@ -3,5 +3,5 @@
 1. 安装相关依赖：
 
 ```bash
-npm install crypto
+npm install progress aliyun-sdk --save-dev
 ```
