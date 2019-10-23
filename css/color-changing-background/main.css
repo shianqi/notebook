@@ -1,0 +1,32 @@
+@keyframes changing {
+  0% {
+    background-position-x: 0%;
+    background-position-y: 0%;
+  }
+
+  50% {
+    background-position-x: 100%;
+    background-position-y: 100%;
+  }
+
+  100% {
+    background-position-x: 0%;
+    background-position-y: 0%;
+  }
+}
+
+.changing-background {
+  background-image: linear-gradient(to bottom right, #c3ebf1, #3bd0f7, #2125eb, #c560d6, #faebfe);
+  background-size: 1000% 1000%;
+  animation: changing 5s infinite;
+}
+
+.button {
+  width: 300px;
+  padding: 40px 60px;
+  color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 900;
+}
