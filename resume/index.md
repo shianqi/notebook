@@ -60,6 +60,10 @@ https://air.seniverse.com/?y=2019&l=WX4FBXXFKE4F
 
 ### 气象图层SDK
 
+例子：
+
+https://www.seniverse.com/visualizations_demo
+
 风场图：
 
 金字塔瓦片图：
@@ -67,6 +71,8 @@ https://air.seniverse.com/?y=2019&l=WX4FBXXFKE4F
 前端差值图
 
 前端重新着色，裁剪的单通道图
+
+3D 地球点击坐标 （https://）
 
 3D 风场图
 
