@@ -30,7 +30,7 @@
 
 - ○ [responsive-loader](https://github.com/herrstucki/responsive-loader)
 
-缺点：不支持 1x, 2x，待确定是否可以使用 50%、25% 的方式使用。
+缺点：不支持 1x, 2x，不可以使用 50%、25% 的方式使用。使用时需要知道图片的宽度。
 
 ## 内联小图像
 
