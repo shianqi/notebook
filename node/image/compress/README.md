@@ -14,7 +14,9 @@
 
 常用的工具有：
 
-- ○ [imagemin](https://github.com/imagemin/imagemin)
+- ● [imagemin](https://github.com/imagemin/imagemin)
+
+- ● [imagemin-cli](https://github.com/imagemin/imagemin-cli)
 
 - ○ [imagemin-webpack-plugin](https://github.com/Klathmon/imagemin-webpack-plugin)
 
@@ -26,9 +28,11 @@
 
 - SVG: ○ [imagemin-svgo](https://github.com/imagemin/imagemin-svgo)
 
+- WEBP: ● [imagemin-web](https://github.com/imagemin/imagemin-web)
+
 ## 使用渐进式图片
 
-- ○ [responsive-loader](https://github.com/herrstucki/responsive-loader)
+- ● [responsive-loader](https://github.com/herrstucki/responsive-loader)
 
 缺点：不支持 1x, 2x，不可以使用 50%、25% 的方式使用。使用时需要知道图片的宽度。
 
@@ -85,4 +89,4 @@ webpack loader，获取图片 Url，调用 `lqip` 返回结果
 
 ## 解决方案：
 
-- ○ [next-optimized-images](https://github.com/cyrilwanner/next-optimized-images)
+- ● [next-optimized-images](https://github.com/cyrilwanner/next-optimized-images)
