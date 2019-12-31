@@ -1,0 +1,20 @@
+{
+  "name": "ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:commonjs": "tsc --module commonjs --outDir cjs ",
+    "build:es6": "tsc --module es6 --outDir es6",
+    "build:umd": "tsc --module umd --outDir umd",
+    "build:amd": "tsc --module amd --outDir amd",
+    "build:system": "tsc --module system --outDir system",
+    "build": "npm run build:amd && npm run build:commonjs && npm run build:es6 && npm run build:umd && npm run build:system"
+  },
+  "keywords": [],
+  "author": "shianqi",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.7.4"
+  }
+}

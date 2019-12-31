@@ -1,0 +1,25 @@
+{
+  "name": "babel-module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "obj.js",
+  "scripts": {
+    "build:commonjs": "BABEL_ENV=commonjs babel src --out-dir cjs --copy-files",
+    "build:es6": "BABEL_ENV=es6 babel src --out-dir es6 --copy-files",
+    "build:umd": "BABEL_ENV=umd babel src --out-dir umd --copy-files",
+    "build:amd": "BABEL_ENV=amd babel src --out-dir amd --copy-files",
+    "build:system": "BABEL_ENV=systemjs babel src --out-dir system --copy-files",
+    "build": "npm run build:amd && npm run build:commonjs && npm run build:es6 && npm run build:umd && npm run build:system"
+  },
+  "keywords": [],
+  "author": "shianqi",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-transform-modules-amd": "^7.7.5",
+    "@babel/plugin-transform-modules-systemjs": "^7.7.4",
+    "@babel/plugin-transform-modules-umd": "^7.7.4",
+    "@babel/preset-env": "^7.7.7"
+  }
+}
