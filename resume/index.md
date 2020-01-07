@@ -4,13 +4,13 @@
 
 全栈工程师 / 极客 / 实践派 / 开源软件爱好者
 
+除去开发外，对绘画、设计、交互、产品都有自己的见解和追求
+
 ### 技术栈
 
 **前端：** React 及其周边生态为主，styled-components，webpack，Babel，WebGL
 
 **后端：** Node.js 为主，JavaEE、ASP.NET、mongodb、Mysql、Docker、微服务
-
-除去开发外，对绘画、设计、交互、产品都有自己的见解和追求
 
 ### 联系方式
 
@@ -49,13 +49,13 @@ https://www.seniverse.com/
 
 ### Whenbot 天气机器人（钉钉心知天气机器人）
 
-自定义规则条件（不限于天气），当条件触发时，通过短信、邮件、微信、Webhook 等方式推送至用户终端，例如：当明天 PM2.5 大于 220 并且 温度小于 25℃ 时，发微信提示我。
+https://whenbot.com/
+
+自定义规则条件（不限于天气），当条件触发时，通过短信、邮件、微信、Webhook 等方式推送至用户终端，例如：当明天 PM2.5 大于 220 并且 温度小于 25℃ 时，发微信提醒我。
 
 **团队成员：** 2 前端 + 1 后端 + 1 设计
 
 负责前端开发，整体技术类似于新官网
-
-https://whenbot.com/
 
 ### 天气插件 v3
 
@@ -69,11 +69,13 @@ https://github.com/seniverse/widget-v3-frontend
 
 https://www.seniverse.com/visualizations_demo
 
-包括：WebGl 风场粒子动画，金字塔瓦片图，多通道图层压缩算法，单通道图层前端着色，阈值裁剪算法，前端矢量差值图等一系列功能。
+包括 WebGl 风场粒子动画，金字塔瓦片图，多通道图层压缩算法，单通道图层前端着色，阈值裁剪算法，前端矢量差值图等一系列功能。
 
-关键词：压缩算法，预加载，缓存，WebGL，Canvas，geotiff，Three.js
+**关键词：** 压缩算法，预加载，缓存，WebGL，Canvas，geotiff，Three.js
 
 ### 多个其他商业合作项目
+
+暂无描述
 
 ## 个人项目
 
