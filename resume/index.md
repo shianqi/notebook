@@ -8,7 +8,7 @@
 
 ### 技术栈
 
-**前端：** React 及其周边生态为主，styled-components，webpack，Babel，WebGL
+**前端：** React 及其周边生态为主，styled-components、webpack、Babel、WebGL 等
 
 **后端：** Node.js 为主，JavaEE、ASP.NET、mongodb、Mysql、Docker、微服务
 
