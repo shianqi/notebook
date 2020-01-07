@@ -4,6 +4,12 @@
 
 全栈工程师 / 极客 / 实践派 / 开源软件爱好者
 
+### 技术栈
+
+**前端：** React 及其周边生态为主，styled-components，webpack，Babel，WebGL
+
+**后端：** Node.js 为主，JavaEE、ASP.NET、mongodb、Mysql、Docker、微服务
+
 除去开发外，对绘画、设计、交互、产品都有自己的见解和追求
 
 ### 联系方式
@@ -31,21 +37,21 @@ https://www.seniverse.com/insights
 
 https://www.seniverse.com/
 
-团队成员：2 前端 + 3 后端 + 2 设计
+**团队成员：** 2 前端 + 3 后端 + 2 设计
 
-项目历时：设计 + 实现共计约 45 天
+**项目历时：** 设计 + 实现共计约 45 天
 
-负责工作：整体架构，除 Dashboard 外的页面编写
+**负责工作：** 整体架构，除 Dashboard 外的页面编写
 
-*架构：*整体采用 Next.js 框架，使用 React + Typescript 编写。用 Redux 管理状态，样式方面采用 Material-UI + styled-components 编写，并遵循 Material Design 设计规范。同时还编写了一个基于 koa 的 BFF 服务用于整合部分复杂的前后端交互逻辑。
+**架构：** 整体采用 Next.js 框架，使用 React + Typescript 编写。用 Redux 管理状态，样式方面采用 Material-UI + styled-components 编写，并遵循 Material Design 设计规范。同时还编写了一个基于 koa 的 BFF 服务用于整合部分复杂的前后端交互逻辑。
 
-*部署：*进行同构渲染，并静态化导出针对不同 url 的入口文件，去掉 .html 后缀上传到 OSS 上，利用 CDN 加速页面访问，实现无需服务器的静态网站，并支持前端无痕页面跳转。提取供公共使用的 Appbar 和 Footer 封装成单独组件。
+**部署：** 进行同构渲染，并静态化导出针对不同 url 的入口文件，去掉 .html 后缀上传到 OSS 上，利用 CDN 加速页面访问，实现无需服务器的静态网站，并支持前端无痕页面跳转。提取供公共使用的 Appbar 和 Footer 封装成单独组件。
 
 ### Whenbot 天气机器人（钉钉心知天气机器人）
 
 自定义规则条件（不限于天气），当条件触发时，通过短信、邮件、微信、Webhook 等方式推送至用户终端，例如：当明天 PM2.5 大于 220 并且 温度小于 25℃ 时，发微信提示我。
 
-团队成员：2 前端 + 1 后端 + 1 设计
+**团队成员：** 2 前端 + 1 后端 + 1 设计
 
 负责前端开发，整体技术类似于新官网
 
@@ -55,9 +61,9 @@ https://whenbot.com/
 
 https://github.com/seniverse/widget-v3-frontend
 
-团队成员：3 前端 + 1 后端
+**团队成员：** 3 前端 + 1 后端
 
-负责部分样式的设计和前端整体技术的选型、编码。设计遵循 Material Design 设计规范，追求更加灵活的配置方式。
+负责部分样式的设计和前端整体技术的选型、部分编码工作。设计遵循 `Material Design` 设计规范，追求更加灵活的配置方式。
 
 ### 气象图层 SDK
 
