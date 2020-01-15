@@ -11,19 +11,21 @@
 
 全栈工程师 / 极客 / 实践派 / 开源软件爱好者
 
+长期活跃于 GitHub，不断学习并贡献内容
+
 除去开发外，对绘画、设计、交互、产品都有自己的见解和追求
 
 ### 技术栈
 
-**前端：** React 及其周边生态为主，Next.js、styled-components、webpack、Babel、WebGL 等
+**前端：** React 及其周边生态为主，Next.js、postcss、styled-components、webpack、Babel、WebGL 等
 
 **后端：** Node.js 为主，Koa、JavaEE、mongodb、Mysql、微服务、Docker
 
 # 工作经历
 
-## 北京心知科技有限公司（A 轮）
+## 北京心知科技有限公司（A 轮，10~30 人）
 
-（前端开发工程师 2017-10 ~ 2018-7 实习 2018-7 ~ 至今）
+前端开发工程师 (2017.10 ~ 2018.7)实习， (2018-7 ~ 至今)正式加入
 
 ### 天气数据可视化分析平台（旧项目维护，升级）
 
@@ -39,7 +41,7 @@
 **技术要点：**
 
 - 前端：React.js + Redux + (LESS => CSS Modules => styled-components）+ WebGL，通过 Babel + Webpack 编译打包，shell 脚本部署。
-- 后端：Node.js + Koa + MongoDB + Redis，构建的十多个微服务组成
+- 后端：Node.js + Koa + MongoDB + Redis 构建的十多个微服务组成
 
 ### 新官网 & 新后台管理系统
 
@@ -75,7 +77,7 @@ https://github.com/seniverse/seniverse-map-demos
 
 ### 其他
 
-- 天气插件 v3（已开源）https://github.com/seniverse/widget-v3-frontend
+- 心知天气开源插件 v3.0 https://github.com/seniverse/widget-v3-frontend
 - 重构空气质量排行榜 https://air.seniverse.com/?y=2019&l=WX4FBXXFKE4F
 - 多个其他商业合作项目，应公司要求，不便透露
 
