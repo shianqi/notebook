@@ -1,0 +1,12 @@
+{
+  "name": "BFC",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx http-server"
+  },
+  "keywords": [],
+  "author": "shianqi",
+  "license": "ISC"
+}
