@@ -1,0 +1,17 @@
+{
+  "name": "CSRF",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx http-server ./",
+    "start-server": "node ./server.js"
+  },
+  "keywords": [],
+  "author": "shianqi",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.11.0",
+    "koa-router": "^8.0.7"
+  }
+}

