@@ -5,8 +5,6 @@ npm install --save-dev \
     eslint \
     eslint-config-prettier \
     eslint-config-standard \
-    eslint-config-standard-react \
-    eslint-plugin-babel \
     eslint-plugin-import \
     eslint-plugin-node \
     eslint-plugin-prettier \
@@ -23,29 +21,34 @@ npm install --save-dev \
 
 ```javascript
 module.exports = {
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   env: {
     browser: true,
     es6: true,
-    jest: true
+    jest: true,
   },
-  extends: ["standard", "standard-react"],
+  extends: ['standard', 'plugin:react/recommended'],
   globals: {
-    Atomics: "readonly",
-    SharedArrayBuffer: "readonly",
-    AMap: "readonly"
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
   },
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 2018,
-    sourceType: "module"
+    sourceType: 'module',
   },
-  plugins: ["@typescript-eslint", "babel", "react", "standard"],
+  plugins: ['@typescript-eslint'],
   rules: {
-    "react/prop-types": 0,
-    "@typescript-eslint/no-unused-vars": 2
-  }
-};
+    'react/prop-types': 0,
+    '@typescript-eslint/no-unused-vars': 2,
+  },
+  settings: {
+    react: {
+      pragma: 'React',
+      version: 'detect',
+    },
+  },
+}
 ```
