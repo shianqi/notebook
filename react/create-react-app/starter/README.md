@@ -1,7 +1,7 @@
-### 开启 typescript 
+### 开启 typescript
 
 ```bash
-npx create-react-app starter --typescript --use-npm
+npx create-react-app my-app --template typescript
 ```
 
 ### 使用 react-hot-loader
@@ -32,8 +32,8 @@ npx create-react-app starter --typescript --use-npm
 - 修改 `src/App.tsx`
 
 ```jsx
-import React from 'react';
-import { hot } from 'react-hot-loader';
+import React from "react";
+import { hot } from "react-hot-loader";
 
 const App = () => <div>Hello World!</div>;
 
