@@ -2,26 +2,70 @@
 
 动画内容是否是实时生成
 
-|     | css | SVG | Video / gif | 图片定帧动画 | canvas | webgl | flash | Javascript + HTML |
-| --- | --- | --- | ----------- | ------------ | ------ | ----- | ----- | ----------------- |
+|         | css | SVG | Video / gif | 图片定帧动画 | canvas | webgl | flash | Javascript + HTML |
+| ------- | --- | --- | ----------- | ------------ | ------ | ----- | ----- | ----------------- |
+|  使用率 | 5   | 5   | 4           | 2            | 4      | 3     | 1     | 2                 |
+| 性能    | 3   | 3   | 3           | 3            | 4      | 5     | 2     | 2                 |
 
 ## SVG
 
-https://segmentfault.com/a/1190000016651711
+#### SMIL
+
+全称： Synchronized Multimedia Integration Language（同步多媒体集成语言）
+
+SMIL 允许你做下面这些事情：
+
+- 动画元素的数值属性（X, Y, …）
+- 动画属性变换（平移或旋转）
+- 动画颜色属性
+- 沿着运动路径运动 （CSS 中已经可以使用 `offset-path` 实现相同的效果）
+- 甚至支持简单的事件
+
+最大的特点是：只要几个 animate 标签，不需要任何 CSS、JavaScript，就能写动画。
+
+[https://codepen.io/shianqi/pen/qBaybaL](https://codepen.io/shianqi/pen/qBaybaL)
+
+2015 年 4 月 Blink 小组打算放弃支持 SMIL, 推荐使用 CSS 动画和 Web 动画，主要原因有两个：
+
+- "In terms of implementation, SMIL adds significant complexity to Blink"
+- "Internet Explorer does not support SMIL which limited its use for critical functionality"
+
+但后续这个计划终止了，可能和 IE 慢慢退出历史舞台有关吧（根本没有退出 <span><img src='./resources/1610074908297.jpg' height='16px' style="display: 'inline-block';" /></span>
+
+参考文章：
+
+- [SVG animation with SMIL](https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_animation_with_SMIL)
+- [SMIL is dead! Long live SMIL! A Guide to Alternatives to SMIL Features](https://css-tricks.com/smil-is-dead-long-live-smil-a-guide-to-alternatives-to-smil-features/)
+- [Is SMIL for SVG deprecated, un-deprecated or… paused but will eventually be deprecated?](https://stackoverflow.com/questions/64514150/is-smil-for-svg-deprecated-un-deprecated-or-paused-but-will-eventually-be-de)
+
+#### SVG + CSS + JavaScript
+
+将 SVG 当做普通的 DOM 使用，本质上还是 CSS/JavaScript 动画，放到后面讲
 
 https://www.cnblogs.com/chuchur/p/10462282.html
 
 [lottie-web](https://github.com/airbnb/lottie-web)
 [react-lottie](https://github.com/chenqingspring/react-lottie)
 
-https://github.com/adobe-webplatform/Snap.svg
-https://github.com/alexk111/SVG-Morpheus
+#### 一些炫酷的例子：
+
+- https://codepen.io/seanmccaffery/pen/xBpbG
+- https://codepen.io/alistairtweedie/pen/GgPBqP
+
+#### 推荐 SVG 动画库
+
+- [Snap.svg](https://github.com/adobe-webplatform/Snap.svg)
+- [GSAP](https://github.com/greensock/GSAP)
 
 ## JavaScript + HTML
 
 通过 setInterval 或 setTimeout 方法的回调函数来持续调用改变某个元素的 CSS 样式以达到元素样式变化的效果。
 
 Jquery 的 `animate()` 方法就是这种方式实现的。JavaScript 实现动画通常会导致页面频繁性重排重绘，性能不是很好
+
+#### 优点
+
+可以实现非常复杂的动画逻辑，但绝大多数可以结合 css3 做优化，提高动画流畅度
 
 ## CSS
 
@@ -44,6 +88,20 @@ https://animista.net/
 2.开发者工具
 
 3.尽量少操作 dom
+
+#### 如何让动画变的丝滑
+
+如今的大多数设备都能达到每秒 60 次屏幕刷新，如果正在运行动画或者过渡，或者用户在滚动页面，则浏览器需要匹配设备的刷新率，为屏幕每一次刷新渲染新的一帧。所以每两帧之间大约有 16ms （1s / 60 ≈ 16.67ms） 的时间，但实际上浏览器内部也需要消耗一些时间，所以所有的计算需要在 10ms 内完成，如果无法完成则会导致帧率下降，导致动画不够丝滑。
+
+![渲染流程-简图](./resources/frame-full.jpg)
+
+参考资料：
+
+- [High Performance Animations](https://www.html5rocks.com/zh/tutorials/speed/high-performance-animations/)
+- [Inside look at modern web browser (part 1)](https://developers.google.com/web/updates/2018/09/inside-browser-part1)
+- [Inside look at modern web browser (part 2)](https://developers.google.com/web/updates/2018/09/inside-browser-part2)
+- [Inside look at modern web browser (part 3)](https://developers.google.com/web/updates/2018/09/inside-browser-part3)
+- [Inside look at modern web browser (part 4)](https://developers.google.com/web/updates/2018/09/inside-browser-part4)
 
 ## Video
 
@@ -93,7 +151,7 @@ Canvas 既可以用软件方法绘图，也可以使用 GPU 加速绘图，具�
 
 看起来 Canvas 都能用硬件加速了，但是当自己用 Canvas 去实现一些复杂的动画的时候为什么感觉性能跟不上呢？
 
-抛开使用者对 Canvas 的使用优化不足，还有就是 Canvas 的设计本身就会出现性能损耗。Canvas 其实性能是损耗并不是图形库的问题，主要的性能损耗是在浏览器中损耗的，浏览器 Canvas 要保持跨平台兼容性，那么肯定要适配到多个通用图形封装库上，这里是一层封装，然后还要将这层封装暴露成 JavaScript Api，这里又要多一层封装。并且 JavaScript 的运行效率并不够高，正是这些原因导致 Canvas 相对要慢一些。
+抛开代码写的比较菜，优化不够(<span><img src='./resources/1610074908297.jpg' height='16px' style="display: 'inline-block';" /></span>，还有就是 Canvas 的设计本身就会出现性能损耗。Canvas 其实性能是损耗并不是图形库的问题，主要的性能损耗是在浏览器中损耗的，浏览器 Canvas 要保持跨平台兼容性，那么肯定要适配到多个通用图形封装库上，这里是一层封装，然后还要将这层封装暴露成 JavaScript Api，这里又要多一层封装。并且 JavaScript 的运行效率并不够高，正是这些原因导致 Canvas 相对要慢一些。
 
 浏览器中的 Canvas 元素绘制的路径是这样的：
 
@@ -120,11 +178,15 @@ https://shianqi.github.io/3d-wind/
 
 Canvas 和 WebGL 性能对比
 
+<video id="video" controls="" preload="none">
+  <source src="./resources/video1.mp4" type="video/mp4">
+</video>
+
 ## FLASH / SilverLight
 
 ### FLASH
 
-Flash 非常强大，它们包含丰富的视频、声音、图形和动画，依赖 Adobe Flash Player 插件，由于不安全、不老实、不高效、不开放等一些列原因，已经退出历史舞台
+Flash 包含丰富的视频、声音、图形和动画，依赖 Adobe Flash Player 插件，由于不安全、不老实、不高效、不开放等一些列原因，已经退出历史舞台
 
 Jalgayo /tʃɑlˈgɑjɔ/ (goodbye in Korean), Flash.
 
@@ -137,7 +199,7 @@ Microsoft Silverlight 是一个跨浏览器的、跨平台的插件
 ## 图片定帧动画
 
 <video id="video" controls="" preload="none">
-  <source src="./video1.mp4" type="video/mp4">
+  <source src="./resources/video1.mp4" type="video/mp4">
 </video>
 
 图片定帧动画本质上就是一些图片的轮询播放，但要最终达成好的效果是需要一些优化策略
