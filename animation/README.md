@@ -172,6 +172,8 @@ https://shianqi.github.io/react-weather/
 
 [Weather Insights](https://www.seniverse.com/insights)
 
+参考文章：[w3cschool webgl](https://www.w3cschool.cn/webgl/)
+
 https://github.com/shianqi/3d-wind
 
 https://shianqi.github.io/3d-wind/
