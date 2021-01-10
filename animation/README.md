@@ -61,7 +61,7 @@ https://www.cnblogs.com/chuchur/p/10462282.html
 
 通过 setInterval 或 setTimeout 方法的回调函数来持续调用改变某个元素的 CSS 样式以达到元素样式变化的效果。
 
-Jquery 的 `animate()` 方法就是这种方式实现的。JavaScript 实现动画通常会导致页面频繁性重排重绘，性能不是很好
+JQuery 的 `animate()` 方法就是这种方式实现的。JavaScript 实现动画通常会导致页面频繁性重排重绘，性能不是很好
 
 #### 优点
 
@@ -70,8 +70,6 @@ Jquery 的 `animate()` 方法就是这种方式实现的。JavaScript 实现动�
 ## CSS
 
 #### css-transitions
-
-clip-path
 
 #### css-animations
 
@@ -93,7 +91,17 @@ https://animista.net/
 
 如今的大多数设备都能达到每秒 60 次屏幕刷新，如果正在运行动画或者过渡，或者用户在滚动页面，则浏览器需要匹配设备的刷新率，为屏幕每一次刷新渲染新的一帧。所以每两帧之间大约有 16ms （1s / 60 ≈ 16.67ms） 的时间，但实际上浏览器内部也需要消耗一些时间，所以所有的计算需要在 10ms 内完成，如果无法完成则会导致帧率下降，导致动画不够丝滑。
 
+![](./resources/js1.png)
+
+![](./resources/js2.png)
+
+我们将浏览器的 DOM 渲染简化，可以得到如下的流程图
+
 ![渲染流程-简图](./resources/frame-full.jpg)
+
+#### 一些开源工具
+
+https://github.com/michalsnik/aos
 
 参考资料：
 
@@ -170,6 +178,14 @@ https://shianqi.github.io/react-weather/
 
 ## WebGL
 
+WebGL（Web Graphics Library），是一种 3D 绘图标准，这种绘图技术标准允许把 JavaScript 和 OpenGL ES 2.0 结合在一起，通过增加 OpenGL ES 2.0 的一个 JavaScript 绑定。让你可以不需要使用 C/C++，而是使用 JavaScript 也能做 3D 图形开发。通俗的说就是用 JavaScript 包了一层 OpenGL ES 2.0。
+
+那什么又是 OpenGL 和 OpenGL ES 呢？OpenGL 全称 Open Graphics Library，但不是一个 API 库，而是一个标准，一个规范。这个规范严格的规定了每个函数要如何执行、以及函数的输出值，至于每个函数具体的实现过程、是由各个厂商的开发者，也就是 OpenGL 库的开发者根据自己的硬件特性开发出相应的 API。OpenGL ES 则是 OpenGL 的嵌入式版本，针对手机、游戏机等设备相对较轻量级的版本。
+
+WebGL 本质上是基于光栅化的 API，而不是基于 3D 的 API。所以 WebGL 所关注的是**矩阵的坐标**和**投影矩阵的颜色**。为了完成上述目标，WebGL 中使用了两种“着色器”：“顶点着色器” 和 “片元着色器”
+
+![WebGL渲染流程](./resources/image1.png)
+
 [Weather Insights](https://www.seniverse.com/insights)
 
 参考文章：[w3cschool webgl](https://www.w3cschool.cn/webgl/)
@@ -177,8 +193,6 @@ https://shianqi.github.io/react-weather/
 https://github.com/shianqi/3d-wind
 
 https://shianqi.github.io/3d-wind/
-
-Canvas 和 WebGL 性能对比
 
 <video id="video" controls="" preload="none">
   <source src="./resources/video1.mp4" type="video/mp4">
